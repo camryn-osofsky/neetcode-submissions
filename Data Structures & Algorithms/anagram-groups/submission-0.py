@@ -4,7 +4,7 @@ class Solution:
         # initialize hashmap
         myMap = {}
 
-        # loop through strings, 
+        # loop through strings, sort, and add to the map
         for s in strs:
             sortedStr = ''.join(sorted(s))
             if sortedStr in myMap:
@@ -12,4 +12,5 @@ class Solution:
             else:
                 myMap[sortedStr] = [s]
 
+        # return the values as a list (will format as a 2D array)
         return list(myMap.values())
