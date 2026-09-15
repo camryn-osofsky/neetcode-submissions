@@ -1,6 +1,6 @@
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
-        # sort the list alphabetically and check each char against the other
+        # sort the list alphabetically and check equality
         # first make sure they are the same length:
         if len(s) != len(t):
             return False
@@ -9,9 +9,8 @@ class Solution:
         s = ''.join(sorted(s))
         t = ''.join(sorted(t))
 
-        # loop through and check each char
-        for i in range(len(s)):
-            if s[i] != t[i]:
-                return False
+        # check strings against each other
+        if s == t:
+            return True
 
-        return True
+        return False
